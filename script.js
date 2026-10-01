@@ -130,8 +130,6 @@
     if (e.key === 'ArrowRight') { show(current + 1, true); e.preventDefault(); }
     if (e.key === 'ArrowLeft') { show(current - 1, true); e.preventDefault(); }
   });
-  $('#viewerPrev').addEventListener('click', () => show(current - 1));
-  $('#viewerNext').addEventListener('click', () => show(current + 1));
   playBtn.addEventListener('click', () => setPlaying(!playing));
   viewer.addEventListener('mouseenter', () => { hovering = true; });
   viewer.addEventListener('mouseleave', () => { hovering = false; });
@@ -249,7 +247,7 @@
     setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
   }));
 
-  /* ---------- Contact form → email (FormSubmit, mailto fallback) ---------- */
+  /* ---------- Contact form to email (FormSubmit, mailto fallback) ---------- */
   const RECIPIENT = 'mehdivahabisani@gmail.com';
   const ENDPOINT = `https://formsubmit.co/ajax/${RECIPIENT}`;
   const form = $('#contactForm');
